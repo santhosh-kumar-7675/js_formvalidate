@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="con">
+        <form id="signup" class="form">
+            <h1 id="h">Sign Up</h1>
+            <div class="form-element">
+                <label for="username">Username:</label> <br>
+                <input type="text" id="username" placeholder="Choose a username" autocomplete="off"> <br>
+                <small></small>
+            </div>
+            <div class="form-element">
+                <label for="email">Email:</label> <br>
+                <input type="text" id="email" placeholder="Enter your email" autocomplete="off"> <br>
+                <small></small>
+            </div>
+            <div class="form-element">
+                <label for="pass">Password:</label> <br>
+                <input type="text" id="pass" placeholder="Enter a strong password" autocomplete="off"> <br>
+                <small></small>
+            </div>
+            <div class="form-element">
+                <label for="cpass">Confirm password:</label> <br>
+                <input type="text" id="cpass" placeholder="Reenter your password" autocomplete="off"> <br>
+                <small></small>
+            </div>
+            <div class="form-element">
+                <input type="submit" value="Sign Up" id="btn">
+                <!-- <button type="submit" id="btn" onclick="validate()">SIGN UP</button> -->
+            </div>
+
+        </form>
+    </div>
+
+
+    <!-- <script>
+        let name=$("#name").val();
+        let mail=$("#mail").val();
+        let pass=$("#pass").val();
+        let cpass=$("#c-pass").val();
+        
+        function foc(){
+            let n=$('#name').val();
+            
+            var inputElement = document.getElementById('name');
+            var parentElement = inputElement.parentElement;
+            const error = parentElement.querySelector('small');
+            var smol = parentElement.getElementsByTagName('small');
+            if(n.length<=2){
+                $(smol).css({'display':'block','color':"red"});
+                parentElement.classList.add('error');
+                error.textContent = 'Username must be between 3 and 25 characters.';
+
+            }
+            else{
+                $(smol).css({'display':'none'});
+                parentElement.classList.remove('error');
+                parentElement.classList.add('success');
+                
+            } 
+               
+        }
+
+        function validate(){
+            const form = document.querySelector('#signup');
+            let name=$("#name").val();
+            let mail=$("#mail").val();
+            let pass=$("#pass").val();
+            let cpass=$("#c-pass").val();
+            
+            if(name.length==0){
+                $(".form-element").addClass("error");
+                $("small").html("enter valid input");
+                $("small").css({'display':'block','color':'red'})
+            }
+            else{
+                $(".form-element").removeClass("error");
+                $(".form-element").addClass("sucess");
+            }
+        }
+
+        
+    </script> -->
+
+    <script src="validate.js"></script>
+</body>
+</html>
+
+
+<!-- reference: https://www.javascripttutorial.net/javascript-dom/javascript-form-validation/ -->
